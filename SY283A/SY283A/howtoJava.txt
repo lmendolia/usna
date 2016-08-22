@@ -1,0 +1,15 @@
+Java: eerily similar to C but with some different syntax/wording
+Differences as follows:
+  Everything must be set up within a class, start program as such:
+    public class programName{}
+  MAIN:
+  public static void main(String[] args){}
+
+SYNTAX DIFFERENCES:
+  print = System.out.println("xxx");
+  Exponents(2^3) = Math.pow(2,3);
+  for loops:
+    for (i = 0; i < 10; i++){}
+TO USE ARRAYS:
+  import java.util.*;
+  List<String> processList = new ArrayList<>();

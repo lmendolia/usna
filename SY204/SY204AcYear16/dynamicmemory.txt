@@ -1,0 +1,20 @@
+why dynamic memory?
+  works because you don't have to know how much memory you want
+  it downloads x amount of bytes and adds more as you need it
+  share memory between functions
+
+malloc
+  allows you to allocate and deallocate memory
+  dynamic memory comes from heap
+
+memory leak
+  when you lose where the pointer is pointing to
+
+calloc
+  "count allocated"
+  memory allocated is zeroed
+  so how to do we tell the difference between an element that has been set and one that has not yet been set?
+    double pointers
+    a pointer to a pointer that points to something...if the thing that points to something hasn't been used...then we know
+
+    #include <stdlib.h>

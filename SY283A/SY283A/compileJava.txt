@@ -1,0 +1,6 @@
+how to compile in Java:
+  javac ClassName.java
+  if no errors:
+    type ls ClassName* (see if it comes up)
+    java ClassName
+      --> should run from here

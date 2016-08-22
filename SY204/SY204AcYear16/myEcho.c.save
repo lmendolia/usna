@@ -1,0 +1,67 @@
+/*
+	Name: MIDN A.N. Mendolia
+	Alpha: 184242
+	Course: SY204 - Sys Prgm & OS Fund
+	Assignment: Programming Laboratory - 0x01: Echo the Cat
+	
+	Description: <A general high-level description about what the program is designed to accomplish>
+	
+	Resources: <Cite any resources used in a style similar to MLA>
+*/
+
+// Required Includes
+#include <stdlib.h>     // Standard Library: exit(3)
+#include <stdio.h>      // Standard I/O Library: printf(3)
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+// Global Constants
+
+// Function Prototypes
+void usageFunction();
+// main Function: <A general high-level description about what the function is designed to accomplish>
+int main( int argc, char *argv[] ) {
+	// Declare Required Variables
+	
+	// Perform Function
+	int opt, xfnd;
+	char *pstr;
+	xfnd = 0;
+	pstr = NULL;
+	while ((opt = getopt(argc, argv, ":p:h")) != -1){
+		if (opt == '?' || opt == ':')
+			printf("; optopt = %3d (%c)"optopt, printable(optopt));
+		printf("\n");
+	switch(opt) {
+	case 'p':pstr = optarg; break;
+	case 'h': usageFunction; break;
+	case ':': usageError(argv[0], "Missing argument", optopt);
+	case '?': usageError(argv[0], "Unrecognized option", optopt);
+	default: fatal("Unexpected case in switch()");
+	}
+}
+	// Return to Caller
+	return 0;
+}
+
+//Usage Option: read in the help option using getopt: these are types of options and this is what they do
+	void usageFunction(){
+	//here will be a series of printf statements that say what each option does
+	//program name, listing, and discussion of command line arguments
+		printf("File Name: myCat");
+		printf("-h: help option, display usage message");
+		exit(0);
+		//EXIT WITH NORMAL RETURN VALUE
+	}
+//Error Handling: for simple error, output error message with errnum
+//error reading
+//bad command line arguments
+//error opening
+//file with no EOF
+//use unique errnum for each of these & printf
+
+//read in argument from command line
+	//output command line arguments to standard output
+	//output space between command line arguments
+	//output trailing new line after last command line argument
